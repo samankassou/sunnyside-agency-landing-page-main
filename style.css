@@ -73,6 +73,12 @@ header {
   min-height: 100vh;
 }
 
+@media screen and (min-width: 768px) {
+  header {
+    background-image: url("./images/desktop/image-header.jpg");
+  }
+}
+
 header nav {
   padding: 0 2rem;
   display: -webkit-box;
@@ -104,10 +110,39 @@ header .nav-links {
   z-index: 10;
 }
 
+@media screen and (min-width: 768px) {
+  header .nav-links {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    position: static;
+    background: none;
+    width: 50%;
+  }
+}
+
 header .nav-links a {
   display: inline-block;
   margin: 1.7rem auto;
   color: #5a636c;
+}
+
+@media screen and (min-width: 768px) {
+  header .nav-links a {
+    color: white;
+    padding: 0.7rem 1.8rem;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+  header .nav-links a:hover {
+    background-color: #a7abae;
+    font-size: 1.2rem;
+    border-radius: 1.4rem;
+  }
 }
 
 header .menu-active {
@@ -122,6 +157,12 @@ header #logo {
 
 header #toggle-menu-btn {
   cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  header #toggle-menu-btn {
+    display: none;
+  }
 }
 
 header .home {
@@ -149,10 +190,12 @@ header .home .icon-arrow-down {
           animation-duration: 1s;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
+  display: block;
 }
 
 /* === about === */
 .about {
+  background-color: white;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1;
@@ -178,12 +221,33 @@ header .home .icon-arrow-down {
           align-items: center;
 }
 
+@media screen and (min-width: 768px) {
+  .about__item {
+    padding: 0;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .about__item:nth-child(2) {
+    -ms-grid-column: 1;
+    grid-column: 1;
+    -ms-grid-row: 1;
+    grid-row: 1;
+  }
+}
+
 .about__title {
   font-size: 2.5rem;
   font-weight: 900;
   padding: 0 3rem;
   margin-bottom: 1rem;
   text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .about__title {
+    font-size: 2rem;
+    margin-top: 2rem;
+  }
 }
 
 .about__text {
@@ -199,6 +263,13 @@ header .home .icon-arrow-down {
   color: #000;
   text-transform: uppercase;
   font-size: 1.2rem;
+}
+
+@media screen and (min-width: 768px) {
+  .about {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
 }
 
 .services__item {
@@ -236,17 +307,44 @@ header .home .icon-arrow-down {
   color: #25564b;
 }
 
+@media screen and (min-width: 768px) {
+  .services__item-gpdesign {
+    background-image: url("./images/desktop/image-graphic-design.jpg");
+  }
+}
+
 .services__item-photography {
   background-image: url("./images/mobile/image-photography.jpg");
   background-size: cover;
   background-position: top;
   color: #19536b;
+  background-image: url("./images/desktop/image-photography.jpg");
+}
+
+@media screen and (min-width: 768px) {
+  .services {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
 }
 
 .testimonials__heading {
   text-align: center;
   color: #a7abae;
   margin: 4rem auto;
+}
+
+@media screen and (min-width: 768px) {
+  .testimonials__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
 }
 
 .testimonials__item {
@@ -259,6 +357,12 @@ header .home .icon-arrow-down {
   color: #5a636c;
   font-weight: 600;
   line-height: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+  .testimonials__text {
+    margin-bottom: 4rem;
+  }
 }
 
 .testimonials__image {
@@ -279,6 +383,12 @@ header .home .icon-arrow-down {
   font-size: 1rem;
 }
 
+@media screen and (min-width: 768px) {
+  .testimonials__profession {
+    margin-bottom: 2rem;
+  }
+}
+
 .projects {
   display: -ms-grid;
   display: grid;
@@ -286,7 +396,15 @@ header .home .icon-arrow-down {
       grid-template-columns: 1fr 1fr;
 }
 
+@media screen and (min-width: 768px) {
+  .projects {
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
 .footer {
+  position: relative;
   background-color: #458c7e;
   padding: 3rem 1rem;
   display: -webkit-box;
@@ -322,9 +440,27 @@ header .home .icon-arrow-down {
 
 .footer__socials {
   margin-top: 3rem;
+  margin-bottom: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 2rem;
+}
+
+.footer .attribution {
+  position: absolute;
+  bottom: 0;
+  padding: 0 1.7rem;
+  text-align: center;
+  color: #a7abae;
+}
+
+.footer .attribution a {
+  color: #25564b;
+}
+
+.footer .attribution a:hover {
+  color: white;
+  text-decoration: underline;
 }
 /*# sourceMappingURL=style.css.map */
