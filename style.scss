@@ -5,7 +5,7 @@ $softRed: hsl(7, 99%, 70%);
 $yellow: hsl(51, 100%, 49%);
 $graphicDesignTextColor: hsl(167, 40%, 24%);
 $photographyText: hsl(198, 62%, 26%);
-$footerBgColor: hsl(168, 34%, 41%);
+$footerBgColor: #95d4c5;
 
 // --- Neutral ---
 
@@ -100,6 +100,8 @@ header {
     align-items: center;
     width: calc(100% - 4rem);
     top: 8rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
     z-index: 10;
     @media screen and (min-width: 600px) {
       display: inline-block;
@@ -112,19 +114,31 @@ header {
 
     a {
       display: inline-block;
-      margin: 1.7rem auto;
+      margin: 1rem auto;
       color: $veryDarkGrayish;
-      &:last-child {
-        padding-right: 0;
+      padding: 0.7rem 1.3rem;
+      border-radius: 1.5rem;
+      transition: background-color 0.5s, color 0.5s;
+      &.active {
+        background-color: $yellow;
+        color: $verydark;
+        font-weight: bold;
+      }
+      &:hover {
+        background-color: $yellow;
+        color: $verydark;
+        font-size: 1.2rem;
+        font-weight: bold;
       }
       @media screen and (min-width: 600px) {
         color: $white;
-        padding: 0.7rem 1.3rem;
         transition: all 0.3s ease;
         &:hover {
-          background-color: $grayish;
-          font-size: 1.2rem;
-          border-radius: 1.4rem;
+          background-color: #6dcefa;
+          color: $white;
+        }
+        &.active {
+          background-color: $white;
         }
       }
     }
@@ -180,9 +194,18 @@ header {
   }
   &__item {
     padding: 2.7rem 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    &.item--text {
+      @media screen and (min-width: 600px) {
+        padding: 1.5rem 0;
+      }
+      @media screen and (min-width: 768px) {
+        padding: 2.5rem 4rem;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+      }
+    }
+
     @media screen and (min-width: 600px) {
       padding: 0;
       justify-content: space-around;
@@ -199,8 +222,14 @@ header {
     margin-bottom: 1rem;
     text-align: center;
     @media screen and (min-width: 600px) {
+      font-size: 1.5rem;
+      margin-top: 1rem;
+      text-align: left;
+    }
+    @media screen and (min-width: 768px) {
       font-size: 2rem;
       margin-top: 2rem;
+      padding: 0 1rem;
     }
   }
   &__text {
@@ -208,16 +237,35 @@ header {
     font-weight: 600;
     line-height: 2rem;
     color: $grayish;
-    padding: 0 1rem;
+    padding: 0 3rem;
     margin-bottom: 2rem;
+    @media screen and (min-width: 600px) {
+      text-align: left;
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+    @media screen and (min-width: 768px) {
+      padding: 0 1rem;
+    }
   }
   &__link {
     color: #000;
+    display: block;
+    text-align: center;
     text-transform: uppercase;
     font-size: 1.2rem;
+    padding: 0 3rem;
+    @media screen and (min-width: 600px) {
+      text-align: left;
+      font-size: 1rem;
+      align-self: flex-start;
+    }
+    @media screen and (min-width: 768px) {
+      padding: 0 1rem;
+    }
   }
 
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: 768px) {
     grid-template-columns: 1fr 1fr;
   }
 }
@@ -238,6 +286,10 @@ header {
     text-align: center;
     padding-bottom: 3rem;
     line-height: 2rem;
+    @media screen and (min-width: 600px) {
+      padding-left: 6rem;
+      padding-right: 6rem;
+    }
   }
   &__item-gpdesign {
     background-image: url("./images/mobile/image-graphic-design.jpg");
@@ -256,20 +308,30 @@ header {
     background-image: url("./images/desktop/image-photography.jpg");
   }
 
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: 768px) {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
 }
 
 .testimonials {
+  @media screen and (min-width: 600px) {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
   &__heading {
     text-align: center;
     color: $grayish;
     margin: 4rem auto;
+    @media screen and (min-width: 600px) {
+      margin-top: 5rem;
+      font-size: 1rem;
+      letter-spacing: 0.3rem;
+      text-transform: uppercase;
+    }
   }
   &__content {
-    @media screen and (min-width: 600px) {
+    @media screen and (min-width: 768px) {
       display: flex;
       justify-content: space-between;
     }
@@ -292,6 +354,10 @@ header {
     height: 5rem;
     width: 5rem;
     margin-bottom: 1.5rem;
+    @media screen and (min-width: 600px) {
+      height: 3rem;
+      width: 3rem;
+    }
   }
   &__name {
     color: $verydark;
@@ -324,8 +390,6 @@ header {
   align-items: center;
 
   &__logo {
-    color: $graphicDesignTextColor;
-    filter: $graphicDesignTextColor;
     margin: 2rem auto;
   }
 
@@ -335,6 +399,9 @@ header {
     gap: 2rem;
     a {
       color: $graphicDesignTextColor;
+      &:hover {
+        color: $white;
+      }
     }
   }
   &__socials {
@@ -342,6 +409,17 @@ header {
     margin-bottom: 2rem;
     display: flex;
     gap: 2rem;
+    li {
+      cursor: pointer;
+
+      img {
+        &:hover {
+          background-color: transparent;
+          filter: invert(50%) sepia(50%) saturate(50%) hue-rotate(259deg)
+            brightness(108%) contrast(100%);
+        }
+      }
+    }
   }
   .attribution {
     position: absolute;

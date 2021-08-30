@@ -8,6 +8,17 @@ toggleBtn.addEventListener('click', ()=>{
 })
 navLinks.forEach((link) =>{
     link.addEventListener('click', ()=>{
+        navLinks.forEach((el)=>{
+            el.classList.remove('active')
+        })
+        link.classList.add('active')
         navMenu.classList.remove('menu-active')
     })
 })
+/*hide menu when user click away
+window.addEventListener('click', (e)=>{
+    if((e.target.classList.value !== "nav-links menu-active")){
+        navMenu.classList.remove('menu-active')
+        console.log(e.target.id)
+    }
+})*/
