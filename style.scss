@@ -61,6 +61,15 @@ a {
     top: 1rem;
   }
 }
+.triangle {
+  position: absolute;
+  right: 0;
+  top: -2rem;
+  width: 0;
+  height: 0;
+  border-bottom: 2rem solid $white;
+  border-left: 2rem solid transparent;
+}
 /*  header */
 header {
   position: relative;
@@ -69,7 +78,7 @@ header {
   background-repeat: no-repeat;
   background-position: center;
   min-height: 100vh;
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 600px) {
     background-image: url("./images/desktop/image-header.jpg");
   }
 
@@ -92,21 +101,25 @@ header {
     width: calc(100% - 4rem);
     top: 8rem;
     z-index: 10;
-    @media screen and (min-width: 768px) {
-      display: inline-flex;
+    @media screen and (min-width: 600px) {
+      display: inline-block;
       flex-direction: row;
       position: static;
       background: none;
-      width: 50%;
+      margin-left: auto;
+      width: fit-content;
     }
 
     a {
       display: inline-block;
       margin: 1.7rem auto;
       color: $veryDarkGrayish;
-      @media screen and (min-width: 768px) {
+      &:last-child {
+        padding-right: 0;
+      }
+      @media screen and (min-width: 600px) {
         color: $white;
-        padding: 0.7rem 1.8rem;
+        padding: 0.7rem 1.3rem;
         transition: all 0.3s ease;
         &:hover {
           background-color: $grayish;
@@ -125,7 +138,7 @@ header {
   }
   #toggle-menu-btn {
     cursor: pointer;
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 600px) {
       display: none;
     }
   }
@@ -170,7 +183,7 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 600px) {
       padding: 0;
       justify-content: space-around;
       &:nth-child(2) {
@@ -185,7 +198,7 @@ header {
     padding: 0 3rem;
     margin-bottom: 1rem;
     text-align: center;
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 600px) {
       font-size: 2rem;
       margin-top: 2rem;
     }
@@ -204,7 +217,7 @@ header {
     font-size: 1.2rem;
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 600px) {
     grid-template-columns: 1fr 1fr;
   }
 }
@@ -231,7 +244,7 @@ header {
     background-size: cover;
     background-position: top;
     color: $graphicDesignTextColor;
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 600px) {
       background-image: url("./images/desktop/image-graphic-design.jpg");
     }
   }
@@ -243,7 +256,7 @@ header {
     background-image: url("./images/desktop/image-photography.jpg");
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 600px) {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
@@ -256,7 +269,7 @@ header {
     margin: 4rem auto;
   }
   &__content {
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 600px) {
       display: flex;
       justify-content: space-between;
     }
@@ -270,7 +283,7 @@ header {
     color: $veryDarkGrayish;
     font-weight: 600;
     line-height: 2rem;
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 600px) {
       margin-bottom: 4rem;
     }
   }
@@ -288,7 +301,7 @@ header {
   &__profession {
     color: $veryDarkGrayish;
     font-size: 1rem;
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 600px) {
       margin-bottom: 2rem;
     }
   }
@@ -297,7 +310,7 @@ header {
 .projects {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 600px) {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }

@@ -63,6 +63,16 @@ a {
   }
 }
 
+.triangle {
+  position: absolute;
+  right: 0;
+  top: -2rem;
+  width: 0;
+  height: 0;
+  border-bottom: 2rem solid white;
+  border-left: 2rem solid transparent;
+}
+
 /*  header */
 header {
   position: relative;
@@ -73,7 +83,7 @@ header {
   min-height: 100vh;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 600px) {
   header {
     background-image: url("./images/desktop/image-header.jpg");
   }
@@ -110,18 +120,19 @@ header .nav-links {
   z-index: 10;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 600px) {
   header .nav-links {
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
+    display: inline-block;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
     position: static;
     background: none;
-    width: 50%;
+    margin-left: auto;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
   }
 }
 
@@ -131,10 +142,14 @@ header .nav-links a {
   color: #5a636c;
 }
 
-@media screen and (min-width: 768px) {
+header .nav-links a:last-child {
+  padding-right: 0;
+}
+
+@media screen and (min-width: 600px) {
   header .nav-links a {
     color: white;
-    padding: 0.7rem 1.8rem;
+    padding: 0.7rem 1.3rem;
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
   }
@@ -159,7 +174,7 @@ header #toggle-menu-btn {
   cursor: pointer;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 600px) {
   header #toggle-menu-btn {
     display: none;
   }
@@ -221,7 +236,7 @@ header .home .icon-arrow-down {
           align-items: center;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 600px) {
   .about__item {
     padding: 0;
     -ms-flex-pack: distribute;
@@ -243,7 +258,7 @@ header .home .icon-arrow-down {
   text-align: center;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 600px) {
   .about__title {
     font-size: 2rem;
     margin-top: 2rem;
@@ -265,7 +280,7 @@ header .home .icon-arrow-down {
   font-size: 1.2rem;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 600px) {
   .about {
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
@@ -307,7 +322,7 @@ header .home .icon-arrow-down {
   color: #25564b;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 600px) {
   .services__item-gpdesign {
     background-image: url("./images/desktop/image-graphic-design.jpg");
   }
@@ -321,7 +336,7 @@ header .home .icon-arrow-down {
   background-image: url("./images/desktop/image-photography.jpg");
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 600px) {
   .services {
     display: -ms-grid;
     display: grid;
@@ -336,7 +351,7 @@ header .home .icon-arrow-down {
   margin: 4rem auto;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 600px) {
   .testimonials__content {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -359,7 +374,7 @@ header .home .icon-arrow-down {
   line-height: 2rem;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 600px) {
   .testimonials__text {
     margin-bottom: 4rem;
   }
@@ -383,7 +398,7 @@ header .home .icon-arrow-down {
   font-size: 1rem;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 600px) {
   .testimonials__profession {
     margin-bottom: 2rem;
   }
@@ -396,7 +411,7 @@ header .home .icon-arrow-down {
       grid-template-columns: 1fr 1fr;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 600px) {
   .projects {
     -ms-grid-columns: 1fr 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr 1fr;
