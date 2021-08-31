@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,600;1,600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@700&display=swap");
 /* === variables === */
 //colors
 $bodyFontSize: 18px;
@@ -27,6 +29,7 @@ html {
   scroll-behavior: smooth;
 }
 body {
+  font-family: "Barlow", sans-serif;
   font-size: $bodyFontSize;
   margin: 0;
   padding: 0;
@@ -138,6 +141,7 @@ header {
           color: $white;
         }
         &.active {
+          font-family: "Fraunces", serif;
           background-color: $white;
         }
       }
@@ -161,6 +165,7 @@ header {
     padding: 0 2rem;
 
     .home-text {
+      font-family: "Fraunces", serif;
       font-size: 2.5rem;
       letter-spacing: 0.6rem;
       text-transform: uppercase;
@@ -216,6 +221,7 @@ header {
     }
   }
   &__title {
+    font-family: "Fraunces", serif;
     font-size: 2.5rem;
     font-weight: 900;
     padding: 0 3rem;
@@ -249,6 +255,7 @@ header {
     }
   }
   &__link {
+    font-family: "Fraunces", serif;
     color: #000;
     display: block;
     text-align: center;
@@ -280,6 +287,7 @@ header {
     padding: 0 2rem;
   }
   &__title {
+    font-family: "Fraunces", serif;
     margin-bottom: 1rem;
   }
   &__description {
@@ -320,6 +328,7 @@ header {
     padding-right: 4rem;
   }
   &__heading {
+    font-family: "Fraunces", serif;
     text-align: center;
     color: $grayish;
     margin: 4rem auto;
@@ -360,12 +369,13 @@ header {
     }
   }
   &__name {
+    font-family: "Fraunces", serif;
     color: $verydark;
     font-weight: 800;
     margin-bottom: 1rem;
   }
   &__profession {
-    color: $veryDarkGrayish;
+    color: $grayish;
     font-size: 1rem;
     @media screen and (min-width: 600px) {
       margin-bottom: 2rem;

@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,600;1,600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@700&display=swap");
 /* === variables === */
 /* reset */
 *,
@@ -13,6 +15,7 @@ html {
 }
 
 body {
+  font-family: "Barlow", sans-serif;
   font-size: 18px;
   margin: 0;
   padding: 0;
@@ -172,6 +175,7 @@ header .nav-links a:hover {
     color: white;
   }
   header .nav-links a.active {
+    font-family: "Fraunces", serif;
     background-color: white;
   }
 }
@@ -201,6 +205,7 @@ header .home {
 }
 
 header .home .home-text {
+  font-family: "Fraunces", serif;
   font-size: 2.5rem;
   letter-spacing: 0.6rem;
   text-transform: uppercase;
@@ -279,6 +284,7 @@ header .home .icon-arrow-down {
 }
 
 .about__title {
+  font-family: "Fraunces", serif;
   font-size: 2.5rem;
   font-weight: 900;
   padding: 0 3rem;
@@ -326,6 +332,7 @@ header .home .icon-arrow-down {
 }
 
 .about__link {
+  font-family: "Fraunces", serif;
   color: #000;
   display: block;
   text-align: center;
@@ -375,6 +382,7 @@ header .home .icon-arrow-down {
 }
 
 .services__title {
+  font-family: "Fraunces", serif;
   margin-bottom: 1rem;
 }
 
@@ -429,6 +437,7 @@ header .home .icon-arrow-down {
 }
 
 .testimonials__heading {
+  font-family: "Fraunces", serif;
   text-align: center;
   color: #a7abae;
   margin: 4rem auto;
@@ -487,13 +496,14 @@ header .home .icon-arrow-down {
 }
 
 .testimonials__name {
+  font-family: "Fraunces", serif;
   color: #23303e;
   font-weight: 800;
   margin-bottom: 1rem;
 }
 
 .testimonials__profession {
-  color: #5a636c;
+  color: #a7abae;
   font-size: 1rem;
 }
 

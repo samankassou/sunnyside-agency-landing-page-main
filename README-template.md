@@ -14,7 +14,6 @@ This is a solution to the [Sunnyside agency landing page challenge on Frontend M
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
 
 **Note: Delete this note and update the table of contents based on what sections you keep.**
 
@@ -53,61 +52,29 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+CSS Grid position is the more important thing that I have learned in this challenge. I discovered how to load images base on the screen size and finally I know how to make some shapes in CSS like triangle, stars etc.
 
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-
-```js
-const proudOfThisFunc = () => {
-  console.log("🎉");
-};
-```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+Change the color of a SVG loaded with `img` tag.
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+I will learn how to structure SASS files for big projects, explore BEM for best CSS class names.
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [Color Picker online](https://www.imagecolorpicker.com) - This helped me for picking some colors inside the design images.
+- [Codepen](https://www.codepen.io/sosuke/pen/Pjoqqp) - This codepen helped me for SVG colors inside `<img>` tags.
+- [The Shapes of CSS](https://www.css-tricks.com/the-shapes-of-css/) - Great articles to understand css shapes.
+- [Load images based on screen size](https://www.questions/23414817/load-images-based-on-screen-size) - A Stackoverflow question which helped me to understand how to use the `<picture>` tag for loading many images based on the screen of the device.
+- [W3Schools CSS Grid](https://www.w3schools.com/css/css_grid.asp) - This site helped me to understand CSS Grid.
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+- Website - [Samankassou](https://www.samankassou.netlify.app)
+- My Github - [Samankassou](https://www.github.com/samankassou)
+- Frontend Mentor - [@samankassou](https://www.frontendmentor.io/profile/samankassou)
+- Twitter - [@samankassou](https://www.twitter.com/samankassou3)
+- My Blog - [@hashnode](https://www.drsam.hashnode.dev)
